@@ -1,0 +1,21 @@
+# IDEs
+.vscode/
+.idea/
+.fleet/
+*.iml
+
+# OS
+.DS_Store
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Go
+vendor/
