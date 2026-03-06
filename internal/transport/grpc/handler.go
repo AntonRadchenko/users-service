@@ -51,25 +51,24 @@ func (h *Handler) GetUser(ctx context.Context, req *userpb.GetUserRequest) (*use
 	}, nil
 }
 
-func (h *Handler) ListUsers(_ *emptypb.Empty, stream userpb.UserService_ListUsersServer) error {
+func (h *Handler) ListUsers(ctx context.Context, _ *emptypb.Empty) (*userpb.UserList, error) {
 	// - Вызвать `svc.GetAllUsers()`
 	users, err := h.svc.GetUsers()
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	// - Преобразовать срез `user.User` → `[]*userpb.User`
-	for _, u := range users {
-		if err := stream.Send(&userpb.User{
+	pbUsers := make([]*userpb.User, len(users))
+	for i, u := range users {
+		pbUsers[i] = &userpb.User{
 			Id:    uint32(u.ID),
-			Email: u.Email,
-		}); err != nil {
-			return err
+            Email: u.Email,
 		}
 	}
 
 	// - Вернуть `&userpb.ListUsersResponse{Users: …}` (возвращаем nil, когда все отправили)
-	return nil
+	return &userpb.UserList{Users: pbUsers}, nil
 }
 
 func (h *Handler) UpdateUser(ctx context.Context, req *userpb.UpdateUserRequest) (*userpb.User, error) {

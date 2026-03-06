@@ -1,5 +1,5 @@
-github.com/AntonRadchenko/project-protos v1.0.1 h1:QHpKPR9RxlsSXog4QENJEbVXfdyO922XWsSHK/ujUoU=
-github.com/AntonRadchenko/project-protos v1.0.1/go.mod h1:S/VVN/VlcYJAyuz1LEOJQMD6LggEqkRF0Ecp7Poe1ug=
+github.com/AntonRadchenko/project-protos v1.0.3 h1:3fkFC7uiyCK4L5p3G5FavvlE1deoKokmMze1PVELEd8=
+github.com/AntonRadchenko/project-protos v1.0.3/go.mod h1:S/VVN/VlcYJAyuz1LEOJQMD6LggEqkRF0Ecp7Poe1ug=
 github.com/cespare/xxhash/v2 v2.3.0 h1:UL815xU9SqsFlibzuggzjXhog7bL6oX9BbNZnL2UFvs=
 github.com/cespare/xxhash/v2 v2.3.0/go.mod h1:VGX0DQ3Q6kWi7AoAeZDth3/j3BFtOZR5XLFGgcrjCOs=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
