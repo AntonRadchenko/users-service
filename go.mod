@@ -3,7 +3,7 @@ module github.com/AntonRadchenko/users-service
 go 1.24.4
 
 require (
-	github.com/AntonRadchenko/project-protos v1.0.3
+	github.com/AntonRadchenko/project-protos v1.0.4
 	golang.org/x/crypto v0.46.0
 	google.golang.org/grpc v1.79.1
 	google.golang.org/protobuf v1.36.11
